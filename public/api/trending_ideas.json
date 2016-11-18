@@ -1,0 +1,41 @@
+[
+  {
+    "_id" : "1",
+    "author" : "amuylaer",
+    "baseScore" : 2,
+    "body" : "The current bike parkings are always full... Make an extra parking next to the railway station.",
+    "createdAt" : "2015-08-01T04:57:16.219Z",
+    "title" : "More bike parkings at the train station"
+  },
+  {
+    "_id" : "2",
+    "author" : "Katlijndc",
+    "baseScore" : 1,
+    "body" : "Our city is missing a place where you can feel the vibe of the other countries. What if we found together a bar where they play African music, serve Asian street food and Argentinian wine? Hmm, can't wait for this little paradise in town. :-)",
+    "createdAt" : "2015-08-01T03:29:07.573Z",
+    "title" : "Meetup place for travellers"
+  },
+  {
+    "_id" : "3",
+    "author" : "wvransbe",
+    "baseScore" : 3,
+    "body" : "Let's be honest - what's so irritating as people that are impatiently waiting till the lights turn green? Instead, let us enjoy local artists' work while we're waiting till it's green. Win win, you see?",
+    "createdAt" : "2015-08-01T03:40:36.497Z",
+    "title" : "Allow street art at every traffic light"
+  },
+  {
+    "_id" : "4",
+    "author" : "amuylaer",
+    "baseScore" : 5,
+    "body" : "Fitness makes us healthy! Let's sport together in the park. :-)",
+    "createdAt" : "2015-08-01T04:54:53.711Z",
+    "title" : "Gym machines in the park"
+  },
+  {
+    "_id" : "5",
+    "author" : "CitizenLab",
+    "baseScore" : 4,
+    "body" : "A lot of pedestrians want to cross the road there. Currently, it's not safe for them and the cars are driving there at a high speed. Let's keep our city safe for pedestrian and cyclists and make a cross road there please.",
+    "title" : "Make a cross road just before the bridge"
+  }
+]

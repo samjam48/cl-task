@@ -1,0 +1,62 @@
+[
+  {
+    "projectId": 1,
+    "users": 161,
+    "ideas": 53,
+    "views": {
+      "week": 15,
+      "month": 188,
+      "year": 9083
+    }
+  },
+  {
+    "projectId": 3,
+    "users": 93,
+    "ideas": 93,
+    "views": {
+      "week": 28,
+      "month": 153,
+      "year": 8898
+    }
+  },
+  {
+    "projectId": 2,
+    "users": 40,
+    "ideas": 28,
+    "views": {
+      "week": 77,
+      "month": 202,
+      "year": 6484
+    }
+  },
+  {
+    "projectId": 4,
+    "users": 163,
+    "ideas": 95,
+    "views": {
+      "week": 69,
+      "month": 139,
+      "year": 7248
+    }
+  },
+  {
+    "projectId": 5,
+    "users": 29,
+    "ideas": 43,
+    "views": {
+      "week": 31,
+      "month": 269,
+      "year": 9070
+    }
+  },
+  {
+    "projectId": 6,
+    "users": 174,
+    "ideas": 88,
+    "views": {
+      "week": 36,
+      "month": 194,
+      "year": 9861
+    }
+  }
+]
