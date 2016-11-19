@@ -9,7 +9,8 @@ import { IndexLink } from 'react-router'
 export default React.createClass({
   render() {
     return (
-          	<div>
+        <div>
+            <img id='logo' src={require('../img/Labbersville.jpg')} />
             <ul role='nav'>
                 <li><NavLink onlyActiveOnIndex={true} to='/'>Home</NavLink></li>
                 <li><NavLink activeClassName="active" to='/search'>Search</NavLink></li>

@@ -13,6 +13,8 @@ import Project from './modules/Project';
 import Tags from './modules/Tags';
 import Trending_ideas from './modules/Trending_ideas';
 
+import ProjectPage from './modules/ProjectPage';
+
 
 render((
         <Router history={browserHistory}>
@@ -22,6 +24,7 @@ render((
                     <Route path='/search/:input' initialData={DB} component={Projects} />
                 </Route>
                 <Route path='trending' component={Trending_ideas} initialData={DB} component={Trending_ideas} />
+                <Route path='/project/:id' initialData={DB} component={ProjectPage} />
             </Route>
         </Router>
     ), document.getElementById('app'))
