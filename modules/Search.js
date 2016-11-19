@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 import NavLink from './NavLink'
 import Button from './Button'
 import TextField from 'material-ui/TextField';
@@ -22,17 +22,23 @@ import Trending_ideas from './Trending_ideas';
 
 export default React.createClass({
   getInitialState: function () {
-    return { search: '' };
+    return { searchInput: '', searchEntered: false };
   },
 
-  handleInput: function (){
-    this.state.search = this.refs.search.input.value
-    console.log(this.state.search);
+  handleInput: function (event){
+    this.setState( { searchInput: this.refs.search.input.value } )
+    //this.state.search = this.refs.search.input.value
+    console.log(this.state.searchInput);
+    console.log(event.type)
+    if(event.key == 'Enter' || event.type == 'click'){
+      console.log('search submitted')
+      this.props.history.push('/search/' + this.refs.search.input.value); //render new route with search term
+    } 
   },
   
   render: function () {
     var DB = this.props.route.initialData
-    var search = this.state.search
+    var searchInput = this.state.searchInput
     return (
       <div>
         <h2>Search</h2>
@@ -45,9 +51,11 @@ export default React.createClass({
         </MuiThemeProvider>
         <ul role='nav'>
           <li><NavLink activeClassName="active" to='/search/:name'>Show All</NavLink></li>
-          <li><NavLink activeClassName="active" to='/search/station'>Station</NavLink></li>
+          <li><NavLink activeClassName="active" to='/search/station'>search 'Station'</NavLink></li>
+          <li><NavLink activeClassName="active" to='/search/sharing'>search 'sharing'</NavLink></li>
           
         </ul>
+
         <div>{this.props.children}</div>
 
 

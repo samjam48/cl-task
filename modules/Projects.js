@@ -1,47 +1,72 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { State, Router, Link, browserHistory  } from 'react-router';
 import Project from './Project';
 
 // import NavLink from './NavLink'
 
   // load all Projects sent from search
 
+  browserHistory.listen(function(event) {
+    console.log('listen', event.pathname);
+
+  })
+
 export default React.createClass({
-  // constructor(){
-  //       super();    // get out context
-  //       this.state = { search: this.props.params.input };    // set up our state
-  //       // this.update = this.update.bind(this);
-  // }
+  mixins: [ State ],
 
   getInitialState() {
     return { search: this.props.params.input };
   },
 
+
+  componentWillReceiveProps() {
+    this.setState({
+      search: this.props.params.input
+      //range: this.getQuery().range
+    })
+  },
+
+  componentWillMount() {
+    this.setState({
+      search: this.props.params.input
+      //range: this.getQuery().range
+
+    })
+  },
+
+  shouldComponentUpdate() {
+    console.log(this.nextState)
+    return true
+    //return this.state.search !== this.nextState.search
+    // return this.state.range !== nextState.range
+  },
+
+
+
   handleSearch() {
     this.setState({ search: this.props.params.input })
   },
 
+
+
   filterResults(search) {
     // console.log(search)
-    // var titles = Object.values(DB.project).map( (project) => project.title)
-    // console.log('titles')
-    // console.log(titles)
-    console.log(search)
-    console.log(DB.project)
+
+    // console.log(search)
+    // console.log(DB.project)
     for(var key in DB.project){console.log(key)}
-    console.log(Object.keys(DB.project))
+    // console.log(Object.keys(DB.project))
     // console.log(DB.project[1].title.toUpperCase())
     var filtered = Object.keys(DB.project).filter( (key) => DB.project[key].title.toUpperCase().indexOf(search) != -1 )
-    console.log(filtered)
+    // console.log(filtered)
     return filtered
   },
   
   render() {
-    this.props.route.initialData()
-    console.log(DB)
-    // var search = this.props.params.input
-    var search = this.state.search
-    console.log(search)
+    this.props.route.initialData() // load DB
+    // console.log(DB)
+    var search = this.props.params.input
+    // console.log(search)
     search == "" || search == ":name" ? search = Object.keys(DB.project) 
                  : search = this.filterResults( search.toUpperCase() )
     // var stats = DB.project_stats
