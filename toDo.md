@@ -1,51 +1,59 @@
 # To Do
 
-* implement global DB for data
+- [x] implement global DB for data
+
+- [x] load all projects
+    - [x] tags
+    - [x] Popular ideas
 
 
 
-* load all projects
-    * tags
-    * Pop ideas
+- [ ] Implement search functionality of DB data
+    - [x] Search Bar
+    - [x] Handle Input
+        - [x] Keypress enter
+        - [ ] Button???
+    - [x] Load correct Project
+        - [x] Basic (find exact project by title)
+        - [ ] Advanced
+            - [ ] update with any project containing supplied text so far in title
+            - [ ] update with any project containing supplied text so far in description
 
-* Implement search functionality of DB data
-
-* Welcome Page
-    * logo and welcome text of the city
-    * Search box at the top (functional)
-        * find idea's by title
-        * Show similar related idea's
-    * Second area (whereever/however I like)
-        * Most popular tags
-        * 5 most popular idea's trending from all projects
-    * 3rd area (header/nav) - [Non funcitonal]
-        * log-in/out
-        * edit profile
-        * choose language should be visiible
-
-
-* For each project. Show:
-    * Title
-    * Number of ideas
-    * Number of engaged users
-    * Have a nice design asset or icon for each project
-    * Use google cards to show more/less about a project
-    * Working link to project page (page not important)
+- [ ] Welcome Page
+    - [ ] logo and welcome text of the city
+    - [ ] Search box at the top (functional)
+        - [ ] find idea's by title
+        - [ ] Show similar related idea's
+    - [ ] Second area (whereever/however I like)
+        - [ ] Most popular tags
+        - [ ] 5 most popular idea's trending from all projects
+    - [ ] 3rd area (header/nav) - [Non funcitonal]
+        - [ ] log-in/out
+        - [ ] edit profile
+        - [ ] choose language should be visiible
 
 
-* Mobile First
-    * Add firebase and pwa functionality
-
-* Footer = make up your own if you like
-
-
-* modularise DB.js
-
-
-* testing ???
+- [ ] For each project. Show:
+    - [ ] Title
+    - [ ] Number of ideas
+    - [ ] Number of engaged users
+    - [ ] Have a nice design asset or icon for each project
+    - [ ] Use google cards to show more/less about a project
+    - [ ] Working link to project page (page not important)
 
 
-* Implement autocomplete of DB search data
+- [ ] Mobile First
+    
+
+- [ ] modularise DB.js
+
+
+
+- [ ] Nice To Haves
+    - [ ] Footer = make up your own if you like
+    - [ ] Add firebase and pwa functionality
+    - [ ] testing ???
+    - [ ] Implement autocomplete of DB search data
 
 
 

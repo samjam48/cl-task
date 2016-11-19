@@ -21,14 +21,14 @@ render((
                 <Route path='/search' initialData={DB} component={Search} >
                     <Route path='/search/:input' initialData={DB} component={Projects} />
                 </Route>
-                <Trending_ideas initialData={DB}/>
-                <Tags initialData={DB}/>
+                <Route path='trending' component={Trending_ideas} initialData={DB} component={Trending_ideas} />
             </Route>
         </Router>
     ), document.getElementById('app'))
 
 
 // <IndexRoute component={Home}/>
+//                 <Tags initialData={DB}/>
 
                     // <Route path='/search/:input' initialData={DB} component={Projects}>
                     //     <Project initialData={DB}/>

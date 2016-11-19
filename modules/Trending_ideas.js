@@ -10,12 +10,11 @@ export default React.createClass({
   // load all Trending ideas
 
   render() {
-    this.props.initialData()
-    console.log( DB.trending_ideas)
+    // var DB = this.props.initialData
+    this.props.route.initialData()
     var ideas = []
     for(var i in DB.trending_ideas){
         var Idea = DB.trending_ideas[i]
-        console.log(Idea)
         ideas.push(<Trending_idea key={i} idea={Idea} />)
     }
     return (

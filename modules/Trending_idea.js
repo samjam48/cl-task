@@ -14,8 +14,6 @@ export default React.createClass({
   render() {
 
     var idea = this.props.idea
-
-    console.log(idea)
     return (
       <div>
         <h4>{idea.title}</h4>
