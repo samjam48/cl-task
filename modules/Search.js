@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, browserHistory } from 'react-router'
 import NavLink from './NavLink'
-import Button from './Button'
-import TextField from 'material-ui/TextField';
-import getMuiTheme        from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
 import Projects from './Projects';
 import Trending_ideas from './Trending_ideas';
 
+import Button             from './Button'
+import TextField          from 'material-ui/TextField';
+import getMuiTheme        from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
 // import IconButton from 'material-ui/IconButton';
 // import NavigationClose from 'material-ui/svg-icons/navigation/close';
 // import FlatButton from 'material-ui/FlatButton';
@@ -28,10 +28,10 @@ export default React.createClass({
   handleInput: function (event){
     this.setState( { searchInput: this.refs.search.input.value } )
     //this.state.search = this.refs.search.input.value
-    console.log(this.state.searchInput);
-    console.log(event.type)
+    // console.log(this.state.searchInput);
+    // console.log(event.type)
     if(event.key == 'Enter' || event.type == 'click'){
-      console.log('search submitted')
+      // console.log('search submitted')
       this.props.history.push('/search/' + this.refs.search.input.value); //render new route with search term
     } 
   },

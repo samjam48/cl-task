@@ -2,14 +2,18 @@ import React from 'react';
 import { State, Router, Link, browserHistory  } from 'react-router';
 import Project from './Project';
 
+// import Button             from './Button'
+// import TextField          from 'material-ui/TextField';
+// import getMuiTheme        from 'material-ui/styles/getMuiTheme';
+// import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
+
 // import NavLink from './NavLink'
 
   // load all Projects sent from search
 
-  browserHistory.listen(function(event) {
-    console.log('listen', event.pathname);
-
-  })
+  // browserHistory.listen(function(event) {
+  //   console.log('listen', event.pathname);
+  // })
 
 export default React.createClass({
   mixins: [ State ],
@@ -35,7 +39,7 @@ export default React.createClass({
   },
 
   shouldComponentUpdate() {
-    console.log(this.nextState)
+    //console.log(this.nextState)
     return true
     //return this.state.search !== this.nextState.search
     // return this.state.range !== nextState.range
@@ -54,7 +58,7 @@ export default React.createClass({
 
     // console.log(search)
     // console.log(DB.project)
-    for(var key in DB.project){console.log(key)}
+    // for(var key in DB.project){console.log(key)}
     // console.log(Object.keys(DB.project))
     // console.log(DB.project[1].title.toUpperCase())
     var filtered = Object.keys(DB.project).filter( (key) => DB.project[key].title.toUpperCase().indexOf(search) != -1 )
@@ -81,7 +85,7 @@ export default React.createClass({
       <div>
         <h2>Projects PLACEHOLDER title</h2>
         <ul>
-          {projects}
+            {projects}
         </ul>
       </div>)	
   }

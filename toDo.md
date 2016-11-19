@@ -12,14 +12,14 @@
     - [x] Search Bar
     - [x] Handle Input
         - [x] Keypress enter
-        - [ ] Button???
+        - [x] Button???
     - [x] Load correct Project
         - [x] Basic (find exact project by title)
         - [ ] Advanced
             - [ ] update with any project containing supplied text so far in title
             - [ ] update with any project containing supplied text so far in description
 
-- [ ] Welcome Page
+- [ ] Single Page
     - [ ] logo and welcome text of the city
     - [ ] Search box at the top (functional)
         - [ ] find idea's by title
@@ -35,28 +35,33 @@
 
 - [ ] For each project. Show:
     - [ ] Title
-    - [ ] Number of ideas
-    - [ ] Number of engaged users
+    - [x] Number of ideas
+    - [x] Number of engaged users
     - [ ] Have a nice design asset or icon for each project
     - [ ] Use google cards to show more/less about a project
-    - [ ] Working link to project page (page not important)
+    - [x] Working link to project page (page not important)
 
 
 - [ ] Mobile First
     
 
-- [ ] modularise DB.js
-
-
-- [ ] Create README instructions
+- [ ] Finishing
+    - [ ] Create README instructions
+    - [ ] Purge unused components
+    - [ ] Clean up files: un-needed imports, logical naming, check comments still valid
+    - [ ] Beautify
+    - [ ] Download, install, test git repo on mac and windows
 
 
 
 - [ ] Nice To Haves
+    - [ ] Modularise DB.js
     - [ ] Footer = make up your own if you like
     - [ ] Add firebase and pwa functionality
     - [ ] testing ???
     - [ ] Implement autocomplete of DB search data
+    - [ ] Correct React state manipulation for search input
+    - [ ] use base64 encoding to display labbersville png instaead of converted jpeg
 
 
 
