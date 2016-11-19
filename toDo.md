@@ -48,6 +48,9 @@
 - [ ] modularise DB.js
 
 
+- [ ] Create README instructions
+
+
 
 - [ ] Nice To Haves
     - [ ] Footer = make up your own if you like
@@ -66,3 +69,33 @@ How does the result look and feel? Is it attractive? Easy to use and understand?
 
 ### Engineering (40%)
 Are you respecting all aspects of a good engineered project, including abstractions, modularity, all aspects related to maintainability, testability and coding style. Are you making good use of the capabilities of the libraries/frameworks you chose?
+
+
+
+# Search Issues
+
+## Searched Items
+Using setstate of search items such as search input and page load of search items everything happens on a delay of 1
+
+e.g.
+input. ‘a' => [  ]
+
+input ‘ab' => [a]
+input ‘abc' => [ab]
+
+If a user clicks the search button or hits enter I load the url with searched for projects.  need ot implement a correct callback functionality of this I think.
+
+### workaround
+ update the searchInput var directly form the search input ignoring the change state rules of React.
+
+
+## Page loading of searched term
+
+Using correct updating of state each time leads to this issue: 
+first click loads nothing.
+2nd click loads desired page with correct searched for projects
+I think this is related to the callback issue from above perhaps but have no idea where it is occuring as the route is correct at time of loading and i dont understand why it isn't accpeting it.
+
+### Workaround
+Ive hard-coded to re-render everytime for now without checking search is different.
+the search var is updated directly from the parameter input instead of updating the state of the component
