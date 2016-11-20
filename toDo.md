@@ -42,7 +42,11 @@
     - [x] Working link to project page (page not important)
 
 
-- [ ] Mobile First
+- [ ] Design
+    - [ ] Mobile First!
+    - [ ] Nice loading of projects
+    - [ ] tags and idea's show initially and then move to side
+
     
 
 - [ ] Finishing
@@ -50,7 +54,7 @@
     - [ ] Purge unused components
     - [ ] Clean up files: un-needed imports, logical naming, check comments still valid
     - [ ] Beautify
-    - [ ] Download, install, test git repo on mac and windows
+    - [ ] Test repo installs and runs on mac and windows
 
 
 
@@ -66,9 +70,6 @@
 
 
 
-
-
-
 ### Design (60%)
 How does the result look and feel? Is it attractive? Easy to use and understand? Fun to use? Is it clear? Original? What message does it convey? Bonus points for creating your own graphical assets. Be creative!
 
@@ -77,9 +78,10 @@ Are you respecting all aspects of a good engineered project, including abstracti
 
 
 
-# Search Issues
+# Issues
 
-## Searched Items
+## Search issues
+### Searched Items
 Using setstate of search items such as search input and page load of search items everything happens on a delay of 1
 
 e.g.
@@ -90,17 +92,31 @@ input ‘abc' => [ab]
 
 If a user clicks the search button or hits enter I load the url with searched for projects.  need ot implement a correct callback functionality of this I think.
 
-### workaround
- update the searchInput var directly form the search input ignoring the change state rules of React.
+#### Current workaround
+ update the searchInput var directly from the search input ignoring the change state rules of React.
 
 
-## Page loading of searched term
+### Page loading of searched term
 
 Using correct updating of state each time leads to this issue: 
 first click loads nothing.
 2nd click loads desired page with correct searched for projects
 I think this is related to the callback issue from above perhaps but have no idea where it is occuring as the route is correct at time of loading and i dont understand why it isn't accpeting it.
 
-### Workaround
+#### Current Workaround
 Ive hard-coded to re-render everytime for now without checking search is different.
-the search var is updated directly from the parameter input instead of updating the state of the component
+The search var is updated directly from the parameter input instead of updating the state of the component.
+
+#### Note
+Some links/searches still fail on first load, needs sorting
+
+
+
+## Image loading
+Main logo image works at start but usually fails at somepoint if youvigate for a while
+
+All other images fail to load from inside components
+
+
+## Materialise-ui card extension
+Cards fail to extend and reveal project stats that should normally be hidden.

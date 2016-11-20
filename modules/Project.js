@@ -25,8 +25,6 @@ import NavLink from './NavLink'
 // add stats = users, ideas, views.week, views.month, views.year
 // tables within cards https://material.google.com/components/data-tables.html#data-tables-tables-within-cards
 
-
-
 // extra info = region, languages, moderators
 // Note: region = geo-JSON data
    // students:       <img src={require('./img/students.jpg')} />
@@ -92,6 +90,8 @@ var Project = React.createClass({
 })
 export default Project;
 
+
+// // simple card example
 
 // const CardExampleWithAvatar = () => (
 //   <Card>

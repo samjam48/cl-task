@@ -1,19 +1,19 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React            from 'react';
+import { render }       from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import DB from './config/Db.js';
+// data
+import DB               from './config/Db.js';
 
-
-import App from './modules/App';
-import Home from './modules/Home';
-import Search from './modules/Search';
-import Projects from './modules/Projects';
-import Project from './modules/Project';
-import Tags from './modules/Tags';
-import Trending_ideas from './modules/Trending_ideas';
-
-import ProjectPage from './modules/ProjectPage';
+// components
+import App              from './modules/App';
+import Home             from './modules/Home';
+import Search           from './modules/Search';
+import Projects         from './modules/Projects';
+import Project          from './modules/Project';
+import Tags             from './modules/Tags';
+import Trending_ideas   from './modules/Trending_ideas';
+import ProjectPage      from './modules/ProjectPage';
 
 
 render((
@@ -29,13 +29,7 @@ render((
         </Router>
     ), document.getElementById('app'))
 
-
-// <IndexRoute component={Home}/>
-//                 <Tags initialData={DB}/>
-
-                    // <Route path='/search/:input' initialData={DB} component={Projects}>
-                    //     <Project initialData={DB}/>
-                    // </Route>
+// // correct loading of images
 
 // var Images = {
 //     brain:          <img src={require('./img/brainstorm.jpg')} />,
@@ -47,6 +41,8 @@ render((
 //     students:       <img src={require('./img/students.jpg')} />
 // }
 
+
+// // correct mounting/unmounting of components
 
 // class App extends React.Component {
 //     constructor(){
@@ -102,7 +98,7 @@ render((
 // export default Wrapper
 
 
-// ====== nested data and this.props.children
+// // ====== nested data and this.props.children
 
 // import React from 'react'
 // import ReactDOM from 'react-dom';
@@ -190,51 +186,3 @@ render((
 // export default App
 
 
-
-// ==== set properties =======
-
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-
-// class App extends React.Component {
-//     render(){
-//         let txt = this.props.txt
-//         return <h1>{txt}</h1>
-//     }
-// }
-
-// App.propTypes = {               // define the types we are expecting
-//     txt: React.PropTypes.string,
-//     cat: React.PropTypes.number.isRequired
-// }
-
-// App.defaultProps = {
-//     txt: 'this is the default txt'
-// }
-
-
-
-// ReactDOM.render(
-//     <App cat={5} />,
-//     document.getElementById('app')
-//     );
-
-
-
-
-// ======= old shit =======
-
-// import { render } from 'react-dom'
-
-
-// render(
-//     <div>
-//         <h1>Hello</h1>
-//         <b>Bold</b>
-//     </div>,
-//     document.getElementById('app')
-// )
-
-// const App = () => <h1>Hello Eggheads</h1>
-
-// export default app
