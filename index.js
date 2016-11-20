@@ -3,15 +3,17 @@ import { render }       from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 // data
-import DB               from './config/Db.js';
+import InitDB               from './config/Db.js';
+InitDB()
 
 // components
 import App              from './modules/App';
+// import NavBar           from './modules/NavBar';
 import Home             from './modules/Home';
 import Search           from './modules/Search';
 import Projects         from './modules/Projects';
-import Project          from './modules/Project';
-import Tags             from './modules/Tags';
+// import Project          from './modules/Project';
+// import Tags             from './modules/Tags';
 import Trending_ideas   from './modules/Trending_ideas';
 import ProjectPage      from './modules/ProjectPage';
 

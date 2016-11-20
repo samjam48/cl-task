@@ -19,33 +19,44 @@ export default React.createClass({
     return { search: this.props.params.input };
   },
 
-
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     this.setState({
-      search: this.props.params.input
+      search: nextProps.params.input
     })
   },
 
   componentWillMount() {
+    // console.log('Mounting')
     this.setState({
       search: this.props.params.input
     })
   },
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state !== this.nextState
+    console.log(this.state)
+    console.log(nextState)
+    return this.state !== nextState
   },
 
 
   filterResults(search) {
     var projectKeysArray = Object.keys(DB.project);
-    var searchResults    = projectKeysArray.filter( (key) => DB.project[key].title.toUpperCase().indexOf(search) != -1 );
+    var searchResults    = projectKeysArray.filter( function(key){  // return projects with search term in title or description
+                                                   return DB.project[key].title.toUpperCase().indexOf(search) != -1 ||
+                                                          DB.project[key].description.toUpperCase().indexOf(search) != -1 
+                                                   });
     return searchResults;
   },
   
   render() {
-    this.props.route.initialData(); // initialise DB
-    var searchTerm     = this.state.search; // this.props.params.input;
+    // console.log('project state search:')
+    // console.log(this.state.search)
+    // console.log('project params:')
+    // console.log(this.props.params.input)
+
+    var DB = this.props.route.initialData; // initialise DB
+
+    var searchTerm     = this.state.search; // this.props.params.input; // 
     var searchResults  = (searchTerm == "") ?  Object.keys(DB.project)                          // if search term blank load all results
                                             :  this.filterResults( searchTerm.toUpperCase() )   // else get a list of results containing the search term
     

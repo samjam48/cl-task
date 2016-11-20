@@ -19,10 +19,10 @@ export default React.createClass({
 
   handleInput: function (event){
     // this.setState( { searchInput: this.refs.search.input.value } )
-    // console.log(event.type)
+    console.log(this.refs.search.input.value)
     if(event.key == 'Enter' || event.type == 'click'){
       this.props.history.push('/search/' + this.refs.search.input.value); //render new route with search term
-      // console.log('search submitted')
+      console.log('search submitted')
     } 
   },
 

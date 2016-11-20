@@ -11,7 +11,7 @@ export default React.createClass({
 
   render() {
     // var DB = this.props.initialData
-    this.props.route.initialData() // load DB
+    var DB = this.props.route.initialData // load DB
     var ideas = []
     for(var i in DB.trending_ideas){
         var Idea = DB.trending_ideas[i]
@@ -23,7 +23,9 @@ export default React.createClass({
         <ul>
            {ideas}
         </ul>
-        {this.props.children}
+
       </div>)	
   }
 })
+
+        // {this.props.children}
