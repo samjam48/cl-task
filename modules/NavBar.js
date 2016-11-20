@@ -3,6 +3,10 @@ import React         from 'react';
 import NavLink       from './NavLink';
 import { IndexLink } from 'react-router'
 import TextField     from 'material-ui/TextField';
+import SwapVert      from 'material-ui/svg-icons/action/swap-vert';
+import ActionHome    from 'material-ui/svg-icons/action/home'
+import getMuiTheme   from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const NavBar = () => (
         <div id="navigation" className="red sticktobottom">	
@@ -12,8 +16,13 @@ const NavBar = () => (
                 <span className="item stitch">&nbsp;</span>
                 <NavLink activeclassNameName="active" to='/trending'>Trending</NavLink>
             </div>
-            <div className="nav nav-center">&nbsp;
-                <NavLink onlyActiveOnIndex={true} to='/'>Home</NavLink>
+            <div className="nav nav-center" >
+                <NavLink onlyActiveOnIndex={true} to='/'>
+                    <img id="logo" src='/img/LabbersvilleLogo.jpg' />
+                    <MuiThemeProvider>
+                        <SwapVert  />       
+                    </MuiThemeProvider>
+                </NavLink>
             </div>
             <div className="nav nav-right">
                 <a className="item" href="#_clients">Edit</a>

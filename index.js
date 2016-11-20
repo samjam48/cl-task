@@ -4,7 +4,6 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 // data
 import InitDB               from './config/Db.js';
-InitDB()
 
 // components
 import App              from './modules/App';
@@ -18,7 +17,7 @@ import Trending_ideas   from './modules/Trending_ideas';
 import ProjectPage      from './modules/ProjectPage';
 
 
-render((
+InitDB(() => render((
         <Router history={browserHistory}>
             <Route path='/' component={App} >
                 <IndexRoute component={Home}/>
@@ -30,6 +29,7 @@ render((
             </Route>
         </Router>
     ), document.getElementById('app'))
+)
 
 // // correct loading of images
 

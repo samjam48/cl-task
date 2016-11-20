@@ -1,13 +1,24 @@
 import React from 'react';
 import axios from 'axios';
 
-export default function initialData() {            // retrieve information from each data source and map to global DB
+let projects, stats, tags, ideas;
 
-        axios.get('/api/projects.json')
+function allDataLoaded(cb){
+    console.log(projects , stats , tags , ideas)
+    if (projects && stats && tags && ideas){
+        cb()
+    }
+}
+
+
+export default function initialData(cb) {            // retrieve information from each data source and map to global DB
+       axios.get('/api/projects.json')
             .then(function (response) {
                 for(var i in response.data){
                     DB.project[response.data[i].id] = response.data[i]
                 }
+                projects = true
+                allDataLoaded(cb)
             })
             .catch(function (error) {
                 console.log(error);
@@ -18,6 +29,8 @@ export default function initialData() {            // retrieve information from 
                 for(var i in response.data){
                     DB.project_stats[response.data[i].projectId] = response.data[i]
                 }
+                stats = true
+                allDataLoaded(cb)
             })
             .catch(function (error) {
                 console.log(error);
@@ -28,6 +41,8 @@ export default function initialData() {            // retrieve information from 
                 for(var i in response.data){
                     DB.tags[i] = response.data[i]
                 }
+                tags = true
+                allDataLoaded(cb)
             })
             .catch(function (error) {
                 console.log(error);
@@ -38,6 +53,8 @@ export default function initialData() {            // retrieve information from 
                 for(var i in response.data){
                     DB.trending_ideas[response.data[i]._id] = response.data[i]
                 }
+                ideas = true
+                allDataLoaded(cb)
             })
             .catch(function (error) {
                 console.log(error);

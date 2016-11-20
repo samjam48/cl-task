@@ -50,8 +50,7 @@ var Project = React.createClass({
     // console.log(project)
     return (
       <div>
-        <img src={require('../img/brainstorm.jpg')} />
-        <img src={require('../img/'+project.img)} />
+        <img src={'/img/' + project.img} />
 
         <MuiThemeProvider>
           <Card>

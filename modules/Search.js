@@ -33,8 +33,7 @@ export default React.createClass({
     // var DB = this.props.route.initialData
     return (
       <div>
-        <h2>Search</h2>
-        
+              
         <MuiThemeProvider>
             <TextField ref="search" floatingLabelText="Search for projects" fullWidth={true} onKeyPress={this.handleInput}/>
         </MuiThemeProvider>
