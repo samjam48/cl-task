@@ -6,46 +6,55 @@
     - [x] tags
     - [x] Popular ideas
 
-
-
-- [ ] Implement search functionality of DB data
+- [x] Implement search functionality of DB data
     - [x] Search Bar
     - [x] Handle Input
         - [x] Keypress enter
         - [x] Button???
     - [x] Load correct Project
         - [x] Basic (find exact project by title)
-        - [ ] Advanced
-            - [ ] update with any project containing supplied text so far in title
-            - [ ] update with any project containing supplied text so far in description
+        - [x] Advanced
+            - [x] update with any project containing supplied text so far in title
+            - [x] update with any project containing supplied text so far in description
+
 
 - [ ] Single Page
-    - [ ] logo and welcome text of the city
-    - [ ] Search box at the top (functional)
-        - [ ] find idea's by title
-        - [ ] Show similar related idea's
+    - [x] logo and welcome text of the city
+    - [x] Search box at the top (functional)
+        - [x] find idea's by title
+        - [?] Show similar related idea's
     - [ ] Second area (whereever/however I like)
         - [ ] Most popular tags
-        - [ ] 5 most popular idea's trending from all projects
+        - [x] 5 most popular idea's trending from all projects
     - [ ] 3rd area (header/nav) - [Non funcitonal]
-        - [ ] log-in/out
+        - [x] log-in/out
         - [ ] edit profile
-        - [ ] choose language should be visiible
+        - [x] choose language should be visible
 
 
 - [ ] For each project. Show:
-    - [ ] Title
+    - [x] Title
     - [x] Number of ideas
     - [x] Number of engaged users
-    - [ ] Have a nice design asset or icon for each project
-    - [ ] Use google cards to show more/less about a project
+    - [x] Load image for each project
+    - [ ] Use extendable material-ui cards:
+        - [x] image inside card loading nicely
+        - [ ] nicely sized and positioned
+        - [ ] Extend to show more/less about a project
     - [x] Working link to project page (page not important)
 
 
 - [ ] Design
     - [ ] Mobile First!
+    - [ ] Intuitive navigation
     - [ ] Nice loading of projects
-    - [ ] tags and idea's show initially and then move to side
+    - [ ] Transitions:
+        - [ ] central nav icon change over:
+            - [ ] arrows slide up, logo icon slide's in and then spins into place (reverse process when going back)
+        - [ ] banner image rise and dissapear as navbar goes from bottom to top
+        - [ ] projects slide in from side when search clicked
+        - [ ] trending ideas
+        - [ ] tags and trending idea's shown centrally initially and then move to side
 
     
 
@@ -59,12 +68,13 @@
 
 
 - [ ] Nice To Haves
+    - [ ] Add colour options as a dataset to DB
     - [ ] Modularise DB.js
     - [ ] Footer = make up your own if you like
     - [ ] Add firebase and pwa functionality
-    - [ ] testing ???
+    - [ ] Jasmine tests
     - [ ] Implement autocomplete of DB search data
-    - [ ] Correct React state manipulation for search input
+    - [x] Correct React state manipulation for search input
     - [ ] use base64 encoding to display labbersville png instaead of converted jpeg
 
 
@@ -78,45 +88,14 @@ Are you respecting all aspects of a good engineered project, including abstracti
 
 
 
-# Issues
+# Issues to fix
 
-## Search issues
-### Searched Items
-Using setstate of search items such as search input and page load of search items everything happens on a delay of 1
+## Material-ui dropdown menu
+Would be intuitive / nicer to have an elegant dropdown for user log-in actions and language selection.
 
-e.g.
-input. ‘a' => [  ]
+## Design positioning
+Nav bar needs sorting to prevent slight movements as dif links clicked and to have it all level and beautiful
+Material-ui doesnt have grid system. probably will need to implement bootstrap or a lot of mix-ins.
 
-input ‘ab' => [a]
-input ‘abc' => [ab]
-
-If a user clicks the search button or hits enter I load the url with searched for projects.  need ot implement a correct callback functionality of this I think.
-
-#### Current workaround
- update the searchInput var directly from the search input ignoring the change state rules of React.
-
-
-### Page loading of searched term
-
-Using correct updating of state each time leads to this issue: 
-first click loads nothing.
-2nd click loads desired page with correct searched for projects
-I think this is related to the callback issue from above perhaps but have no idea where it is occuring as the route is correct at time of loading and i dont understand why it isn't accpeting it.
-
-#### Current Workaround
-Ive hard-coded to re-render everytime for now without checking search is different.
-The search var is updated directly from the parameter input instead of updating the state of the component.
-
-#### Note
-Some links/searches still fail on first load, needs sorting
-
-
-
-## Image loading
-Main logo image works at start but usually fails at somepoint if youvigate for a while
-
-All other images fail to load from inside components
-
-
-## Materialise-ui card extension
-Cards fail to extend and reveal project stats that should normally be hidden.
+## landing page logic
+Currently tracks user events to display landing page or not. If user was directed to site from a link it would show the landing banner image (correct content below so not end of the world). but would be intuitive to use url to drive the logic

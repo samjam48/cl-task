@@ -2,15 +2,8 @@ import React from 'react';
 import { State, Router, Link, browserHistory  } from 'react-router';
 import Project from './Project';
 
-// import Button             from './Button'
-// import TextField          from 'material-ui/TextField';
-// import getMuiTheme        from 'material-ui/styles/getMuiTheme';
-// import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
-// import NavLink from './NavLink'
-
 
   // load all Projects sent from search
-
 
 export default React.createClass({
   mixins: [ State ],
@@ -20,24 +13,16 @@ export default React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      search: nextProps.params.input
-    })
+    this.setState({ search: nextProps.params.input })
   },
 
   componentWillMount() {
-    // console.log('Mounting')
-    this.setState({
-      search: this.props.params.input
-    })
+    this.setState({ search: this.props.params.input })
   },
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(this.state)
-    console.log(nextState)
     return this.state !== nextState
   },
-
 
   filterResults(search) {
     var projectKeysArray = Object.keys(DB.project);
@@ -49,17 +34,12 @@ export default React.createClass({
   },
   
   render() {
-    // console.log('project state search:')
-    // console.log(this.state.search)
-    // console.log('project params:')
-    // console.log(this.props.params.input)
 
-    var DB = this.props.route.initialData; // initialise DB
-
-    var searchTerm     = this.state.search; // this.props.params.input; // 
+    var searchTerm     = this.state.search; 
     var searchResults  = (searchTerm == "") ?  Object.keys(DB.project)                          // if search term blank load all results
                                             :  this.filterResults( searchTerm.toUpperCase() )   // else get a list of results containing the search term
     
+    // map the list of search results onto individual project components and supply the correct data for it to load
     var projectsToShow = searchResults.map( (id) => <Project key={id} project={DB.project[id]} stats={DB.project_stats[id]} /> )
 
     return (
@@ -71,8 +51,6 @@ export default React.createClass({
       </div>)	
   }
 })
-
-// export {Projects}
 
   // browserHistory.listen(function(event) {
   //   console.log('listen', event.pathname);

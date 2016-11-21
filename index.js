@@ -8,19 +8,22 @@ import InitDB               from './config/Db.js';
 // components
 import App              from './modules/App';
 // import NavBar           from './modules/NavBar';
-import Home             from './modules/Home';
+import Welcome            from './modules/Welcome';
 import Search           from './modules/Search';
 import Projects         from './modules/Projects';
 // import Project          from './modules/Project';
 // import Tags             from './modules/Tags';
 import Trending_ideas   from './modules/Trending_ideas';
 import ProjectPage      from './modules/ProjectPage';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 
 InitDB(() => render((
         <Router history={browserHistory}>
             <Route path='/' component={App} >
-                <IndexRoute component={Home}/>
+                <Route path='/welcome' component={Welcome}/>
                 <Route path='/search' initialData={DB} component={Search} >
                     <Route path='/search/:input' initialData={DB} component={Projects} />
                 </Route>

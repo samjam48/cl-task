@@ -13,27 +13,18 @@ import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
 // filter projects to show using search
 
 export default React.createClass({
-  // getInitialState: function () {
-  //   return { searchInput: '' };
-  // },
 
   handleInput: function (event){
-    // this.setState( { searchInput: this.refs.search.input.value } )
-    console.log(this.refs.search.input.value)
-    if(event.key == 'Enter' || event.type == 'click'){
-      this.props.history.push('/search/' + this.refs.search.input.value); //render new route with search term
-      console.log('search submitted')
+    if(event.key == 'Enter' || event.type == 'click'){                      // when search button clicked or user hits enter in search box
+      this.props.history.push('/search/' + this.refs.search.input.value);   // render new route with search term
     } 
   },
 
-  // componentWillUpdate: function(){
-  // },
   
   render: function () {
-    // var DB = this.props.route.initialData
     return (
       <div>
-              
+
         <MuiThemeProvider>
             <TextField ref="search" floatingLabelText="Search for projects" fullWidth={true} onKeyPress={this.handleInput}/>
         </MuiThemeProvider>
@@ -51,6 +42,6 @@ export default React.createClass({
         <div>{this.props.children}</div>
 
       </div>
-      )	
+    )	
   }
 })
