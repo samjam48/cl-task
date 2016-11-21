@@ -26,28 +26,28 @@
     - [ ] Second area (whereever/however I like)
         - [ ] Most popular tags
         - [x] 5 most popular idea's trending from all projects
-    - [ ] 3rd area (header/nav) - [Non funcitonal]
+    - [x] 3rd area (header/nav) - [Non funcitonal]
         - [x] log-in/out
-        - [ ] edit profile
+        - [x] edit profile
         - [x] choose language should be visible
 
 
-- [ ] For each project. Show:
+- [x] For each project. Show:
     - [x] Title
     - [x] Number of ideas
     - [x] Number of engaged users
     - [x] Load image for each project
-    - [ ] Use extendable material-ui cards:
+    - [x] Use extendable material-ui cards:
         - [x] image inside card loading nicely
-        - [ ] nicely sized and positioned
-        - [ ] Extend to show more/less about a project
+        - [x] nicely sized and positioned
+        - [x] Extend to show more/less about a project
     - [x] Working link to project page (page not important)
 
 
 - [ ] Design
     - [ ] Mobile First!
-    - [ ] Intuitive navigation
-    - [ ] Nice loading of projects
+    - [x] Intuitive navigation
+    - [x] Nice loading of projects
     - [ ] Transitions:
         - [ ] central nav icon change over:
             - [ ] arrows slide up, logo icon slide's in and then spins into place (reverse process when going back)
@@ -56,7 +56,6 @@
         - [ ] trending ideas
         - [ ] tags and trending idea's shown centrally initially and then move to side
 
-    
 
 - [ ] Finishing
     - [ ] Create README instructions
@@ -68,6 +67,7 @@
 
 
 - [ ] Nice To Haves
+    - [ ] limit banner stretch to max screen size
     - [ ] Add colour options as a dataset to DB
     - [ ] Modularise DB.js
     - [ ] Footer = make up your own if you like
@@ -75,8 +75,7 @@
     - [ ] Jasmine tests
     - [ ] Implement autocomplete of DB search data
     - [x] Correct React state manipulation for search input
-    - [ ] use base64 encoding to display labbersville png instaead of converted jpeg
-
+    - [ ] Prune modules
 
 
 
@@ -92,10 +91,6 @@ Are you respecting all aspects of a good engineered project, including abstracti
 
 ## Material-ui dropdown menu
 Would be intuitive / nicer to have an elegant dropdown for user log-in actions and language selection.
-
-## Design positioning
-Nav bar needs sorting to prevent slight movements as dif links clicked and to have it all level and beautiful
-Material-ui doesnt have grid system. probably will need to implement bootstrap or a lot of mix-ins.
 
 ## landing page logic
 Currently tracks user events to display landing page or not. If user was directed to site from a link it would show the landing banner image (correct content below so not end of the world). but would be intuitive to use url to drive the logic

@@ -57,7 +57,7 @@
     "startAt": "2011-06-23",
     "endAt": "2012-05-16",
     "importance": 0.315078,
-    "img": "students.jpg",
+    "img": "sharing.jpg",
     "region": {
       "type": "Polygon",
       "coordinates": [
@@ -283,5 +283,4 @@
     "languages": ["en","fr","nl"],
     "moderators": ["Antwan Tosto"]
   }
-
 ]

@@ -1,20 +1,19 @@
-input {
-  background-color: grey;
-  color: yellow;
-}
-
-.projectImage {
-  height: 200px;
-  width: 200px;
-}
+/*// colors = labbersville colours
+    // lightblue = #429dc0
+    // darkblue  = #13698b
+    // lightpeach = #e6a3ac
+    // midpeach = #FF5733
+    // stonepeach = #936577
+    // greypeach = #d65b68
+    // grey = #7f7377*/
 
 #navigation {
     display: block;
     width: 100%;
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 100;
@@ -23,7 +22,7 @@ input {
 }
 
 .navItem {
-  padding: 5px;
+    padding: 10px;
 }
 
 .nav {
@@ -33,32 +32,33 @@ input {
 }
 
 .nav-left {
-    /*width: 500px;*/
-    left: 10%;
-    /*margin-left: -550px;*/
+    display: inline-block;
+    left: 5%;
     text-align: center;
+    position: absolute;
 }
 
 .nav-center {
-    width: 50px;
+    width: 40px;
+    height: 40px;
     left: 50%;
-    /*margin-left: -30px;*/
+    display: inline-block;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
 .nav-right {
-    /*width: 500px;*/
-    right: 10%;
-    /*margin-left: 50px;*/
+    right: 5%;
+    display: inline-block;
     text-align: right;
+    position: absolute;
 }
 
 .grey, .grey a, a.grey {
-    color: '#7f7377'
+    color: #7f7377
 }
 
-#labbersvilleIcon {
+#labbersvilleIcon, #banner{
     width:100%;
     height:100%;
     text-align: center;
@@ -68,7 +68,38 @@ input {
   padding: 20px
 }
 
-/*.sticktobottom {
-    position: absolute;
-    bottom: 100px;
+h1, h2, h3, h4, p {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+}
+
+h1 {
+  color: #13698b !important;
+}
+
+h2, h3 {
+  color: #429dc9 !important;
+}
+
+h4 {
+  color: #FF5733 !important;
+}
+
+p {
+    color: #7f7377 !important;
+    font-size: 18px;
+}
+
+
+
+
+/*Transition stuff - not iplemented */
+/*.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }*/

@@ -1,5 +1,7 @@
 import React  from 'react';
 
+// show icon representing current language selection
+// change icon when clicked
 
 export default React.createClass({
 
@@ -36,7 +38,7 @@ export default React.createClass({
                                                               )
 
         return(
-            <span className="navItem">
+            <span id="languageIconNav" className="navItem">
                 {LanguageIcon}
             </span>
         )

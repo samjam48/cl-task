@@ -1,10 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
-import NavLink from './NavLink'
-import { IndexLink } from 'react-router'
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import MyAwesomeReactComponent from './MyAwesomeReactComponent';
-
 
 export default React.createClass({
   render() {

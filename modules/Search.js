@@ -1,45 +1,28 @@
 import React              from 'react';
-import { Link, browserHistory } from 'react-router';
-import NavLink            from './NavLink';
+import {browserHistory}   from 'react-router';
 import Projects           from './Projects';
-import Button             from './Button';
-// import Trending_ideas     from './Trending_ideas';
+import Searchbar          from './Searchbar';
 
-import TextField          from 'material-ui/TextField';
-import getMuiTheme        from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider   from 'material-ui/styles/MuiThemeProvider';
+
 
 
 // filter projects to show using search
 
 export default React.createClass({
+    handleInput: function (event){
+        if(event.key == 'Enter'){                                                                // when search button clicked or user hits enter in search box
+            this.props.history.push('/search/' + this.refs.searchbar.refs.search.input.value);   // render new route with search term
+        } 
+    },
 
-  handleInput: function (event){
-    if(event.key == 'Enter' || event.type == 'click'){                      // when search button clicked or user hits enter in search box
-      this.props.history.push('/search/' + this.refs.search.input.value);   // render new route with search term
-    } 
-  },
-
-  
   render: function () {
     return (
       <div>
+          <Searchbar ref="searchbar" onKeyPress={this.handleInput}/>
 
-        <MuiThemeProvider>
-            <TextField ref="search" floatingLabelText="Search for projects" fullWidth={true} onKeyPress={this.handleInput}/>
-        </MuiThemeProvider>
-
-        <MuiThemeProvider>
-          <Button onClick={this.handleInput} text="Search" />
-        </MuiThemeProvider>
-
-        <ul role='nav'>
-          <li><NavLink activeClassName="active" to='/search/a'>Show All</NavLink></li>
-          <li><NavLink activeClassName="active" to='/search/station'>search 'Station'</NavLink></li>
-          <li><NavLink activeClassName="active" to='/search/sharing'>search 'sharing'</NavLink></li>
-        </ul>
-
-        <div>{this.props.children}</div>
+          <div>
+            {this.props.children}
+          </div>
 
       </div>
     )	
