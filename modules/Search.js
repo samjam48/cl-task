@@ -1,12 +1,9 @@
 import React              from 'react';
 import {browserHistory}   from 'react-router';
-import Projects           from './Projects';
 import Searchbar          from './Searchbar';
 
 
-
-
-// filter projects to show using search
+// filter projects to show using searchbar when search term submitted using 'enter' button
 
 export default React.createClass({
     handleInput: function (event){

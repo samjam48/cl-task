@@ -64,8 +64,17 @@
     text-align: center;
 }
 
+#banner {
+    margin-top: 18%;
+    margin-bottom: 8%;
+}
+
+#searchBar{
+    margin-bottom: 20px;
+}
+
 .projectCard {
-  padding: 20px
+    padding: 20px
 }
 
 h1, h2, h3, h4, p {
@@ -75,20 +84,24 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  color: #13698b !important;
+    color: #13698b !important;
+    font-size: 26px  !important;
 }
+h2 { font-size: 22px  !important;}
+h3 { font-size: 20px  !important;}
 
 h2, h3 {
-  color: #429dc9 !important;
+    color: #429dc9 !important;
 }
 
 h4 {
-  color: #FF5733 !important;
+    color: #FF5733 !important;
+    font-size: 18px  !important;
 }
 
 p {
     color: #7f7377 !important;
-    font-size: 18px;
+    font-size: 15px  !important;
 }
 
 

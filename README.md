@@ -1,54 +1,61 @@
-# Citizenlab Front-End Developer Assignment
+# Citizenlab Front-End Developer Assignment - Sam Harris Submission
 
-## Introduction
-The goal of this assignment is to develop a small single page application, displaying participation projects for the city of _Labbersville_. The assignment is a little vague on purpose and allows a good amount of freedom, so make use of it to show off!
+## Install and run
+* Clone/download repo
 
-## Assignment
-The assignment is to make a listing page of participation projects for the imaginary city Labbersville, meant for the citizens. This page is also the landing page for their participation platform. A participation project is a project launched by the city officials to crowdsource ideas around a certain topic.
+* Use ```$ npm install``` to download and install required packages
 
-* The logo and welcome text of the city should be visible.
+* then ```$ npm start``` to start the server
 
-* Every project should at the very least show a title, the number of ideas and the number of engaged users to the project. Be smart and creative by showing more (or less?), the data provides you with plenty of opportunity.
-
-* A search box on top allows you to filter the project by searching in their title and description. This should be functional.
-
-* Next to that, as a secondary functionality, the most popular tags and the list of the 5 most trending ideas over all projects should be displayed on the same page in some way, allowing the user to directly access them. (behaviour after clicking them is not part of the assignment). 
-
-* The goal for the citizen is to enter one of the projects, where she will be able to see all the ideas related to this project. This idea listing page is not part of the assignment, but reaching a dummy page by clicking should work.
-
-* Next to that, actions for logging in/out, editing a profile and choosing a language(nl/fr/en) should be visible. None of it should be functional.
-
-* The page should be usable on mobile and on desktop/tablet. 
-
-In this repository you can find all the files and assets: Texts, graphics and mock API responses with all the available data. 
-Don’t waste time making a backend API to serve the json responses, simply fake a working API in the front-end!
-
-## Rules
-
-* You can (and should!) use any third party library or framework you want, but you have to provide us with a list of used code/frameworks. This also includes code from snippets/SO answers/gists/tutorials...
-
-* All code not included in the list, you have written yourself.
-
-* We are fans of angular2 and you score points by using it. However, if you have experience in similar frameworks, the quality of your solution is way more important.
-
-* The end result is delivered in a privately shared git repository user `kogre` on github or user `koeng` on bitbucket. It contains a `README.md` that explains how to run it.
-
-* By handing in the assignment, in case your assignment leads to you being hired by Citizenlab NV, the code you wrote for the assignment becomes the intellectual property of Citizenlab NV.
-
-## Evaluation
-
-The evaluation is based on 2 axis:
-
-### Design (60%)
-How does the result look and feel? Is it attractive? Easy to use and understand? Fun to use? Is it clear? Original? What message does it convey? Bonus points for creating your own graphical assets. Be creative!
-
-### Engineering (40%)
-Are you respecting all aspects of a good engineered project, including abstractions, modularity, all aspects related to maintainability, testability and coding style. Are you making good use of the capabilities of the libraries/frameworks you chose?
-
-### Process
-If we like your work, we will go through your result together, giving you the chance to explain your choices.  What tradeoffs did you chose and what was the motivation?
+* App will run on http://localhost:3001
 
 
-In case of questions, feel free to contact koen@citizenlab.co
-Good luck!
+## About
+* This App is built using the React framework for Node.js. Modular principles are followed and in nearly every case any functionality that can be a seperate component is implemented as one.
 
+* Data for the app is in the ```/public/api``` folder.
+
+* The handler function for providing this data to the app is ```/config/db.js``` which turns all the JSON data into a single object available across the app.
+
+* ```index.js``` sets the how url routes load different views and how components relate to each other (parent / children tree)
+
+* App components held in ```/modules``` folder.
+
+* ES6 syntax used and babel packeage implemented to transpile this for use on most modern browsers.
+
+
+## Use Instructions
+* The UX should be fairly obvious so the user can quickly find the current projects or search for their desired project.
+
+* They can find out more information or navigate to the projects holding page.
+
+* Users can also change the apparent log-in status and language option
+
+
+## Please note
+
+### Layout
+* The website app is laid out with use of transitions in mind.
+    * As transitions are not implemented it might look a bit stupid with jerky changes to the entire view that wouldn't happen in the final design
+
+### Brand Feel
+* Font's and design pallete were not considered beyond quickly making it not look shit.
+
+* It would do well with some thought put into this
+
+### Mobile unfriendly
+* Site is dyanamic for screen size but screens smaller than ipad ruins the view. 
+    * This is a big limitation but by no means insurmountable to change.
+
+### Tags
+* I have not implemented a view for tags.
+    * A tag cloud could be nice the words were odd and i didn't understand what it related to at all and there was plenty of other things to do...
+
+### Time-frame & experience
+* This app was built over three days using a framework I have never used before along with associated set-backs.
+    * I enjoyed the challenge and solving the problems I encountered.
+    * I am deeply unhappy with the lack of transitions and brand feel BUT I am happy that this accurately demonstrates what I'm capable of in three days doing something I haven't done before.
+
+* I'd like to think one more day would be enough to fix the issues above but it could well be another three days as I am still unexperienced in implementing these things in React.
+
+* ```toDo.md``` shows a list of current tasks completed to make the app and other tasks I would complete with more time.

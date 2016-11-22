@@ -38,12 +38,11 @@ export default React.createClass({
                                                         <SwapVert className="navIcon" color='#429dc0' style={{width: 50, height: 50, padding:5}} /> 
                                                     </MuiThemeProvider>
                                                 </NavLink>
-                                                )
-                                             : (
+                                            ) : (
                                                 <NavLink id="labbersvileIcon" onlyActiveOnIndex={true} onClick={this.handleClick} to='/' >
                                                     <img id="labbersvilleIcon"  src='/img/LabbersvilleIcon.jpg' />
                                                 </NavLink>
-                                                )
+                                            )
 
         return(
             <div>

@@ -3,6 +3,8 @@ import Searchbar        from './Searchbar';
 import {browserHistory} from 'react-router';
 
 // Show welcome text when user goes to access the site
+// render search bar component so they intuitively know the main call to action. -> find projects
+
 
 export default React.createClass({
     handleInput: function (event){

@@ -16,10 +16,9 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 
 // Component renders a single project 
   // requires project details and project stats to be passed in via props from projects.js
-
-  // material-ui card used
-
-
+  // image title and description shown on main card
+  // stats hidden in extension to card the user can show if they are interested
+  // button to that projects own page in the extension panel
 
 
 // Optional TO DO

@@ -5,8 +5,13 @@ import Project from './Project';
 import TrendingIdeas   from './Trending_ideas';
 
 
-//  
   // load all Projects sent from search
+    // if user searchs 'all' all projects are shown
+    // search input filters for any projects with the term in their title or description
+    // builds array of project key's and then loads each project using the project component
+    // shows advice if bad search term entered
+    // loads trending ideas component beneath projects
+
 
 export default React.createClass({
   mixins: [ State ],

@@ -10,7 +10,6 @@
     - [x] Search Bar
     - [x] Handle Input
         - [x] Keypress enter
-        - [x] Button???
     - [x] Load correct Project
         - [x] Basic (find exact project by title)
         - [x] Advanced
@@ -48,6 +47,10 @@
     - [ ] Mobile First!
     - [x] Intuitive navigation
     - [x] Nice loading of projects
+    - [ ] Brand feel
+        - [ ] improve brand colour options and set uses for different mesagging environments
+        - [ ] improve fonts and assign fonts for dif use cases
+        - [ ] colours and images to suit background environment whilst keeping a clean UI
     - [ ] Transitions:
         - [ ] central nav icon change over:
             - [ ] arrows slide up, logo icon slide's in and then spins into place (reverse process when going back)
@@ -57,12 +60,12 @@
         - [ ] tags and trending idea's shown centrally initially and then move to side
 
 
-- [ ] Finishing
-    - [ ] Create README instructions
-    - [ ] Purge unused components
-    - [ ] Clean up files: un-needed imports, logical naming, check comments still valid
-    - [ ] Beautify
-    - [ ] Test repo installs and runs on mac and windows
+- [x] Finishing
+    - [x] Create README instructions
+    - [x] Purge unused components
+    - [x] Clean up files: un-needed imports, logical naming, check comments still valid
+    - [x] Beautify
+    - [x] Test repo installs and runs on mac and windows
 
 
 
