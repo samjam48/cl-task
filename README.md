@@ -1,4 +1,4 @@
-# Citizenlab Front-End Developer Assignment - Sam Harris Submission
+# Labbersville Demo
 
 ## Install and run
 * Clone/download repo
